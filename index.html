@@ -57,10 +57,21 @@ and open the template in the editor.
                 border-bottom: 1px solid #eee;
                 width: 50%;
                 float: left;
+                
+                /*font-family: 'Montserrat', sans-serif !important;*/
+                /*font-family: 'Open Sans', sans-serif !important;*/
+                /*font-family: 'Poppins', sans-serif !important;*/
+                font-family: 'Roboto', sans-serif !important;
+
+                /*font-family: 'Times new Roman', times !important;*/
             }
 
             ._menu ._sub {
                 color: #ddd;
+                font-weight: 400;
+                /*margin-left: 0px;*/
+                
+                /*font-family: 'Raleway', sans-serif !important;*/
             }
 
             ._phrase {
@@ -96,6 +107,10 @@ and open the template in the editor.
                 font-size: 14px;
                 font-weight: 600;
                 color: black;
+            }
+            
+            button:focus {
+                outline: 2px solid #ddd;
             }
 
             button.icon {
@@ -253,19 +268,25 @@ and open the template in the editor.
                 float: left;
                 margin: 3px;
                 cursor: pointer;
+                tabindex: 1;
+            }
+
+            .option {
+                display: none;
             }
         </style>
 
-        <div class="segment">
+        <article class="segment">
+        <section>
 
             <div style="display: table; width: 100%;">
                 <div class="_menu">
                     <i class="material-icons blue_color" style="font-size: 160%; position: relative; bottom: -8px; margin-right: 8px;">&#xE80B;</i>
 
                     Lucian
-
+                    
                     <span class="_sub">
-                        Rossoni Ribas
+                        Web Master
                     </span>
                 </div>
 
@@ -277,20 +298,22 @@ and open the template in the editor.
                             PDF
                         </span>
                     </button>
-                    
-                    <button>
+
+                    <button class="black option">
+                        Git
+                    </button>
+
+                    <button class="option">
                         Contato
                     </button>
-                    
-                    <button>
+
+                    <button class="option">
                         Sobre 
                     </button>
 
-<!--                    <button class="transparent icon">
+                    <button class="transparent icon show_options">
                         <i class="material-icons">&#xE5D2;</i>
-                        &nbsp;
-                        Menu
-                    </button>-->
+                    </button>
                 </div>
             </div>
 
@@ -350,12 +373,13 @@ and open the template in the editor.
                 <div></div>
                 <div></div>
             </div>
-        </div>
+        </section>
+        </article>
 
         <!--<hr/>-->
         <br/>
 
-        <div class="segment" style="background: #f6f6f6; display: table;">
+        <div class="segment" style="background: #f0f0f0; display: table;">
             <div style="grid">
 
 
@@ -381,9 +405,8 @@ and open the template in the editor.
                         </h2>
 
                         <p>
-                            Desenvolvimentos acadêmicos e pessoais envolvendo
-                            conhecimentos sobre tecnologias promissoras, Web e
-                            desktop.
+                            Desenvolvimentos acadêmicos e pessoais de sistemas e 
+                            módulos de vinculação independente.
                         </p>
 
                         <div class="center">
@@ -411,7 +434,6 @@ and open the template in the editor.
                             margin: 20px 0;
                             ">Idealizações</h2>
 
-                            <br/>
                         <p>
                             Breves e objetivas textualizações referentes a
                             pensamentos e eventualidades habituais.
@@ -436,7 +458,6 @@ and open the template in the editor.
                             text-align: center;
                             margin: 20px 0;
                             ">Composições</h2>
-                            <br/>
 
                         <p>
                             Composições breves de melodias morais afetivas,
@@ -479,6 +500,32 @@ and open the template in the editor.
                     $('._phrase').eq(number).fadeIn('slow');
 
                 });
+
+                $('.show_options').click(function () {
+                    if ($('.option').is(':visible'))
+                        $('.option').hide('medium');
+                    else
+                        $('.option').show('medium');
+                });
+
+                console.log();
+
+                setInterval(function () {
+
+                    var number;
+
+                    $.each($('.steps div'), function (a, b) {
+                        if ($('.steps .black')[0] == b) {
+                            number = a + 1;
+                            
+                            if (number == $('.steps div').length)
+                                number = 0;
+                        }
+                    });
+
+                    $('.steps div').eq(number).click();
+
+                }, 7000);
 
             });
         </script>
