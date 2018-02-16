@@ -58,6 +58,7 @@ and open the template in the editor.
                 width: 50%;
                 float: left;
 
+                /*font-family: 'Relaway', sans-serif !important;*/
                 /*font-family: 'Montserrat', sans-serif !important;*/
                 /*font-family: 'Open Sans', sans-serif !important;*/
                 /*font-family: 'Poppins', sans-serif !important;*/
@@ -108,7 +109,7 @@ and open the template in the editor.
                 background: #ddd;
                 padding-left: 1px;
                 display: inline;
-                margin: 0px 20px;
+                margin: 0px 10px;
             }
 
             .red_color {
@@ -230,7 +231,9 @@ and open the template in the editor.
             }
 
 
-            /* buttons */
+            /* 
+            buttons 
+            */
 
             .button {
                 border: none;
@@ -244,6 +247,7 @@ and open the template in the editor.
                 font-family: 'Poppins';
                 background: #ddd;
                 color: black;
+                /*box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.05);*/
             }
 
             .button.inline {
@@ -283,17 +287,26 @@ and open the template in the editor.
             .green  { background: #21ba45; }
             .purple { background: purple; }
             .black  { background: black !important; }
-            .transparent { 
-                background: none; 
-            }
-            .transparent.border {
-                border: 1px solid #ddd;            }
+            .transparent { background: none; }
+            
+            .button.transparent.border { padding: 8px 20px; }
+            .transparent.border { border: 2px solid #ddd; }
+
+            .button.purple.transparent { color: purple; }
+            .button.purple.transparent.border { color: purple; border: 2px solid purple; }
+
+            .button.green.transparent { color: #21ba45; }
+            .button.green.transparent.border { color: #21ba45; border: 2px solid #21ba45; }
 
             /**/
 
 
             .button.option {
                 display: none;
+            }
+            
+            .material-icons.thumb {
+                position: absolute; margin: 0px auto; font-size: 800%; margin-top: -47%; margin-left: 33%; 
             }
         </style>
 
@@ -302,7 +315,7 @@ and open the template in the editor.
 
                 <div style="display: table; width: 100%;">
                     <div class="_menu">
-                        <i class="material-icons blue_color" style="font-size: 160%; position: relative; bottom: -8px; margin-right: 8px;">&#xE80B;</i>
+                        <i class="material-icons " style="font-size: 160%; position: relative; bottom: -9px; margin-right: 10px; color: #0016b0;">&#xE80B;</i>
 
                         Lucian
 
@@ -317,20 +330,23 @@ and open the template in the editor.
 
                     <div style="float: right; padding: 30px 0;">
 
-                        <button class="button inline transparent">
+                        <button class="button inline icon transparent">
+                            <i class="material-icons">&#xE0E1;</i>
                             Contato
                         </button>
 
-                        <button class="button inline  transparent">
-                            Sobre Mim
+                        <button class="button inline icon transparent">
+                            <i class="material-icons">&#xE87C;</i>
+                            Sobre
                         </button>
 
-                        <span class="_vertical_divider" style="margin: 10px;"></span>
 
-                        <button class="button inline  icon transparent border">
+                        <button class="button inline icon black" style="margin-left: 30px;">
                             <i class="material-icons">&#xE335;</i>
                             Github
                         </button>
+
+                        <span class="_vertical_divider" style="margin: 10px;"></span>
 
                         <button class="button blue inline" style="margin-left: 5px;">
                             Curriculum
@@ -430,7 +446,11 @@ and open the template in the editor.
 
 
                 <div class="column">
-                    <img src="images/1.jpg"/>
+                    <div style="position: relative;">
+                        <img src="images/1.jpg"/>
+                        
+                        <i class="material-icons thumb" style="color: #d6c7a9;">&#xE871;</i>
+                    </div>
 
                     <div class="content">
 
@@ -443,25 +463,38 @@ and open the template in the editor.
                             módulos de vinculação independente.
                         </p>
 
-                        <div class="center">
+                        <!--<div class="center">-->
                             <!--                            <button class="button black center icon" style="display: inline; margin-right: 10px;">
                                                             <i class="material-icons">&#xE335;</i>
                                                             Github
                                                         </button>-->
 
-                            <button class="button purple center icon right">
-                                Ver
-                                <!--<i class="material-icons">&#xE5D3;</i>-->
-                                <i class="material-icons">&#xE145;</i>
+<!--                            <button class="button purple center icon black inline">
+                                Github
+                                <i class="material-icons">&#xE335;</i>
                             </button>
-                        </div>
+                            
+                            &nbsp;-->
+                            
+                            <button class="button purple center icon right" style="background: #b39f77;">
+                                Ver
+                                <i class="material-icons">&#xE5D3;</i>
+                                <!--<i class="material-icons">&#xE145;</i>-->
+                            </button>
+                        <!--</div>-->
 
                         <br/>
                     </div>
                 </div>
 
                 <div class="column">
-                    <img src="images/2.jpg"/>
+                    <div style="position: relative;">
+                        <img src="images/2.jpg"/>
+                        
+                        <i class="material-icons thumb" style="color: #5f73c3;">&#xE90F;</i>
+                    </div>
+                    
+                    
 
                     <div class="content">
 
@@ -472,9 +505,9 @@ and open the template in the editor.
                             pensamentos e eventualidades habituais.
                         </p>
 
-                        <button class="button purple center icon right">
+                        <button class="button purple center icon right" style="background: #5f73c3;">
                             Ver
-                            <i class="material-icons">&#xE145;</i>
+                            <i class="material-icons">&#xE5D3;</i>
                         </button>
 
                         <br/>
@@ -483,7 +516,11 @@ and open the template in the editor.
 
 
                 <div class="column">
-                    <img src="images/3.jpg"/>
+                    <div style="position: relative;">
+                        <img src="images/3.jpg"/>
+                        
+                        <i class="material-icons thumb" style="color: #c079d7;">&#xE405;</i>
+                    </div>
 
                     <div class="content">
 
@@ -494,21 +531,21 @@ and open the template in the editor.
                             ausentes de edições sonoras e ambientes tecnicos.
                         </p>
 
-                        <button class="button purple center icon right">
+                        <button class="button purple center icon right" style="background: #9f57b7;">
                             Ver
-                            <i class="material-icons">&#xE145;</i>
+                            <i class="material-icons">&#xE5D3;</i>
                         </button>
 
                         <br/>
                     </div>
 
-                    <br/>
+                    <br/><br/><br/>
                 </div>
             </div>
         </div>
 
 
-        <br/><br/><br/>
+        <!--<br/>-->
 
         <script>
             $(document).ready(function () {
