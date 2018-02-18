@@ -1,0 +1,14 @@
+.steps {
+    display: table;
+    margin: 0px auto;
+}
+
+.steps div {
+    padding: 7px;
+    background: #ccc;
+    border-radius: 10px;
+    float: left;
+    margin: 3px;
+    cursor: pointer;
+    tabindex: 1;
+}

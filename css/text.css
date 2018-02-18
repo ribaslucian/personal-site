@@ -1,0 +1,43 @@
+.color-blue { color: #2185d0 !important; }
+.color-blue-1 { color: #0016b0; }
+.color-orange { color: brown !important; }
+
+.phrase {
+    font-size: 320%;
+    color: black;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.phrase .points {
+    font-family: 'Montserrat', sans-serif !important;
+    letter-spacing: 5px;
+}
+
+.phrase .sub {
+    text-transform: none;
+    color: grey;
+    font-size: 35%;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding: 40px 0;
+    width: 60%;
+    text-align: center;
+    line-height: 2;
+    margin: 0px auto;
+    display: table;
+}
+
+.phrase .sub .autor {
+    /*font-family: 'Roboto';*/  
+    /*padding: 10px;*/
+    /*font-size: 80%;*/
+    /*font-weight: 500;*/
+}
+
+@media only screen and (max-width: 768px) {
+    .phrase .sub {
+        width: 100%;
+    }
+}

@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Lucian.</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <script src="javascripts/jquery-3.3.1.min.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Raleway:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+            @import url('https://fonts.googleapis.com/css?family=Montserrat:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+            @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+            @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+            @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+
+
+            html, body {
+                /*background: #fefefe;*/
+                margin: 0px;
+                padding: 0px;
+                font-size: 14px;
+                color: rgba(0,0,0,.84);
+                line-height: 2;
+
+
+                font-family: 'Raleway', sans-serif !important;
+                /*font-family: 'Montserrat', sans-serif !important;*/
+                /*font-family: 'Open Sans', sans-serif !important;*/
+                /*font-family: 'Poppins', sans-serif !important;*/
+                /*font-family: 'Roboto', sans-serif !important;*/
+
+                /*font-family: 'Times new Roman', times !important;*/
+            }
+
+            .segment {
+                padding: 10px 100px;
+            }
+
+            ._menu {
+                padding: 30px 0;
+                font-weight: 900;
+                font-size: 140%;
+                font-weight: 900;
+
+                /*text-align: center;*/
+
+                border-bottom: 1px solid #eee;
+                width: 50%;
+                float: left;
+
+                /*font-family: 'Relaway', sans-serif !important;*/
+                /*font-family: 'Montserrat', sans-serif !important;*/
+                /*font-family: 'Open Sans', sans-serif !important;*/
+                /*font-family: 'Poppins', sans-serif !important;*/
+                font-family: 'Roboto', sans-serif !important;
+
+                /*font-family: 'Times new Roman', times !important;*/
+            }
+
+            ._menu ._sub {
+                color: #ddd;
+                font-weight: 400;
+                /*margin-left: 0px;*/
+
+                /*font-family: 'Raleway', sans-serif !important;*/
+            }
+
+            ._phrase {
+                font-size: 320%;
+                color: black;
+                font-weight: 900;
+                text-align: center;
+                /*margin-top: 100px;*/
+                /*border-top: 1px solid #eee;*/
+                /*width: 50%;*/
+                /*float: right;*/
+                /*font-family: 'Open Sans', sans-serif;*/
+            }
+
+            ._phrase ._sub {
+                color: grey;
+                font-size: 35%;
+                font-weight: 400;
+                letter-spacing: 1px;
+                padding: 40px 0;
+                width: 60%;
+                text-align: center;
+                line-height: 2;
+                margin: 0px auto;
+                display: table;
+            }
+
+            button:focus {
+                outline: 2px solid #ddd;
+            }
+
+            ._vertical_divider {
+                height: 100% !important;
+                background: #ddd;
+                padding-left: 1px;
+                display: inline;
+                margin: 0px 10px;
+            }
+
+            .red_color {
+                color: #db2828;
+            }
+
+            .blue_color {
+                color: #2185d0;
+            }
+
+            .green_color {
+                color: #21ba45;
+            }
+
+            .grey_color {
+                color: #ddd;
+            }
+
+            ._grid_three {
+                display: table;
+                width: 100%;
+                /*background: red;*/
+                padding: 20px;
+            }
+
+            ._grid_three div {
+                background: #ccc;
+                width: 30%;
+                height: 300px;
+                display: table;
+                float: left;
+                margin: 10px;
+            }
+
+            hr {
+                background: #ddd;
+                height: 1px;
+                border: 0;
+            }
+
+            .center {
+                display: table;
+                margin: 0px auto;
+            }
+
+            .column {
+                width: calc(33.33% - 50px);
+                padding: 40px 25px;
+                float: left;
+            }
+
+            .column img {
+                height: 210px;
+                width: 100%;
+                border-radius: 20px 20px 0 0;
+                /*border-radius: 20px;*/
+                padding: 0px !important;
+                margin: 0px !important;
+            }
+
+
+            .content {
+                /*border: 1px solid #eee;*/
+                height: 290px;
+                margin-top: -9px;
+                border-top: 0px;
+                display: table;
+                /*width: calc(100% + 1px);*/
+                border-radius: 0 0 20px 20px;
+                background-color: white;
+
+                /*box-shadow: 0px 2px 20px #ddd !important;;*/
+                border-bottom: 4px solid #ddd;
+                box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
+
+                /*display: none;*/
+            }
+
+            .column h2 {
+                text-transform: uppercase;
+
+                /*font-family: 'Raleway', sans-serif !important;*/
+                /*font-family: 'Montserrat', sans-serif !important;*/
+                /*font-family: 'Open Sans', sans-serif !important;*/
+                /*font-family: 'Poppins', sans-serif !important;*/
+                font-family: 'Roboto', sans-serif !important;
+                font-weight: 800;
+
+                /*color: #333;*/
+                text-align: center;
+                margin: 20px 0;
+
+            }
+
+            .column p {
+                letter-spacing: 1px;
+                color: grey;
+                padding: 0px 30px;
+                text-align: center;
+            }
+
+            .column button {
+                margin-top: 25px;
+            }
+
+            .steps {
+                display: table;
+                margin: 0px auto;
+            }
+
+            .steps div {
+                padding: 7px;
+                background: #ccc;
+                border-radius: 10px;
+                float: left;
+                margin: 3px;
+                cursor: pointer;
+                tabindex: 1;
+            }
+
+
+            /* 
+            buttons 
+            */
+
+            .button {
+                border: none;
+                outline: none;
+                border-radius: 4px;
+                padding: 10px 20px;
+                font-weight: 600;
+                display: table;
+
+                font-size: 14px;
+                font-family: 'Poppins';
+                background: #ddd;
+                color: black;
+                /*box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.05);*/
+            }
+
+            .button.inline {
+                display: inline-table;
+            }
+
+            .button.icon .material-icons {
+                float: left;
+                position: relative;
+                top: 6px;
+                font-size: 22px;
+                margin-top: -7px !important;
+                margin-right: 12px;
+            }
+
+            .button.icon.right .material-icons {
+                margin-right: 0;
+                margin-left: 12px;
+                float: right;
+            }
+
+            .button.only.icon {
+                padding: 10px 12px;
+            }
+
+            .button.only.icon .material-icons {
+                float: none;
+                margin: 0px;
+            }
+
+            .red, .blue, .green, .purple, .black {
+                color: white;
+            }
+
+            .red    { background: #db2828; }
+            .blue   { background: #2185d0; }
+            .green  { background: #21ba45; }
+            .purple { background: purple; }
+            .black  { background: black !important; }
+            .transparent { background: none; }
+            
+            .button.transparent.border { padding: 8px 20px; }
+            .transparent.border { border: 2px solid #ddd; }
+
+            .button.purple.transparent { color: purple; }
+            .button.purple.transparent.border { color: purple; border: 2px solid purple; }
+
+            .button.green.transparent { color: #21ba45; }
+            .button.green.transparent.border { color: #21ba45; border: 2px solid #21ba45; }
+
+            /**/
+
+
+            .button.option {
+                display: none;
+            }
+            
+            .material-icons.thumb {
+                position: absolute; margin: 0px auto; font-size: 800%; margin-top: -47%; margin-left: 33%; 
+            }
+        </style>
+
+        <article class="segment">
+            <section>
+
+                <div style="display: table; width: 100%;">
+                    <div class="_menu">
+                        <i class="material-icons " style="font-size: 160%; position: relative; bottom: -9px; margin-right: 10px; color: #0016b0;">&#xE80B;</i>
+
+                        Lucian
+
+                        <span class="_vertical_divider"></span>
+
+                        <span class="_sub">
+                            Web Master
+                        </span>
+                    </div>
+
+
+                    <div style="float: right; padding: 30px 0;">
+
+                        <button class="button inline icon transparent">
+                            <i class="material-icons">&#xE0E1;</i>
+                            Contato
+                        </button>
+
+                        <button class="button inline icon transparent">
+                            <i class="material-icons">&#xE87C;</i>
+                            Sobre
+                        </button>
+
+
+                        <button class="button inline icon black" style="margin-left: 30px;">
+                            <i class="material-icons">&#xE335;</i>
+                            Github
+                        </button>
+
+                        <span class="_vertical_divider" style="margin: 10px;"></span>
+
+                        <button class="button blue inline" style="margin-left: 5px;">
+                            Curriculum
+                            <!--<i class="material-icons">&#xE89E;</i>-->
+
+                            <!--                            <span class="grey_color">
+                                                            PDF
+                                                        </span>-->
+                        </button>
+
+                        <!--                        <button class="button inline transparent only icon show_options">
+                                                    <i class="material-icons">&#xE5D2;</i>
+                                                </button>-->
+                    </div>
+                </div>
+
+                <br/>
+                <br/>
+
+                <div class="_phrase">
+                    <span style="text-transform: uppercase;">
+                        " Se possui capacidade
+                        <span style="font-family: 'Montserrat', sans-serif !important; letter-spacing: 5px;">
+                            ...
+                        </span>
+                    </span>
+
+                    <div class="_sub">
+                        conquistas e celebrações são triviais; não tire proveito de
+                        situações específicas para demonstrá-la, demonstre-a o tempo
+                        todo."
+
+                        <br/>
+
+                        <button class="button icon right green center" style="margin-top: 30px;">
+                            Entenda Melhor
+                            <i class="material-icons">&#xE5C8;</i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="_phrase" style="display: none;">
+                    <span style="text-transform: uppercase;">
+                        " Os que se encantam com a prática
+                        <span style="font-family: 'Montserrat', sans-serif !important; letter-spacing: 5px;">
+                            ...
+                        </span>
+                    </span>
+
+                    <div class="_sub">
+                        sem a ciência, são como os timoneiros que entram no navio sem
+                        timão nem bússola, nunca tendo certeza do seu destino."
+                        (Leonardo da Vinci)
+                    </div>
+                </div>
+
+                <div class="_phrase" style="display: none;">
+                    <span style="text-transform: uppercase;">
+                        " O nível da importância
+
+                        <span style="font-family: 'Montserrat', sans-serif !important; letter-spacing: 5px;">
+                            ...
+                        </span>
+                    </span>
+
+                    <div class="_sub">
+                        frente discordância na relação de indivíduos define quem deve conter."
+                    </div>
+                </div>
+
+                <div class="steps">
+                    <div class="black"></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </section>
+        </article>
+
+        <!--<hr/>-->
+        <br/>
+
+        <!--<div class="segment" style="background: #ccc; display: table; background-image: url('https://dealjumbo.com/wp-content/uploads/p2181.jpg'); background-size: 100% 100%;">-->
+        <!--<div class="segment" style="background: #ccc; display: table; background-image: url('https://www.concurseirosfederais.net/wp3/wp-content/uploads/2013/08/background-photography-960x350-madeira.jpg'); background-size: 100% 100%;">-->
+        <!--<div class="segment" style="background: #ccc; display: table; background-image: url('https://image.freepik.com/vetores-gratis/mesa-de-madeira-de-encontro-a-um-fundo-do-quadro_1048-5160.jpg'); background-size: 100% 100%;">-->
+        <!--<div class="segment" style="background: #ccc; display: table; background-image: url('https://static.vecteezy.com/system/resources/previews/000/133/727/non_2x/vector-wood-planks-background.jpg');">-->
+        <!--<div class="segment" style="background: #ccc; display: table; background-image: url('https://n6-img-fp.akamaized.net/free-vector/white-canvas-background_1053-239.jpg?size=338&ext=jpg');">-->
+        <div class="segment" style="background: #f6f6f6; display: table; background-image: url('images/bg.png');">
+            <!--        <div class="segment" style="
+                         /*             border-top: 4px solid #eee;
+                                      border-bottom: 4px solid #eee;*/
+                         display: table;
+                         background: #f4f4f4;
+                         /*background: linear-gradient(white, #c09c69);*/
+                         ">-->
+            <br/>
+            <div style="grid">
+
+
+                <div class="column">
+                    <div style="position: relative;">
+                        <img src="images/1.jpg"/>
+                        
+                        <i class="material-icons thumb" style="color: #d6c7a9;">&#xE871;</i>
+                    </div>
+
+                    <div class="content">
+
+                        <h2>
+                            Projetos
+                        </h2>
+
+                        <p>
+                            Desenvolvimentos acadêmicos e pessoais de sistemas e 
+                            módulos de vinculação independente.
+                        </p>
+
+                        <!--<div class="center">-->
+                            <!--                            <button class="button black center icon" style="display: inline; margin-right: 10px;">
+                                                            <i class="material-icons">&#xE335;</i>
+                                                            Github
+                                                        </button>-->
+
+<!--                            <button class="button purple center icon black inline">
+                                Github
+                                <i class="material-icons">&#xE335;</i>
+                            </button>
+                            
+                            &nbsp;-->
+                            
+                            <button class="button purple center icon right" style="background: #b39f77;">
+                                Ver
+                                <i class="material-icons">&#xE5D3;</i>
+                                <!--<i class="material-icons">&#xE145;</i>-->
+                            </button>
+                        <!--</div>-->
+
+                        <br/>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div style="position: relative;">
+                        <img src="images/2.jpg"/>
+                        
+                        <i class="material-icons thumb" style="color: #5f73c3;">&#xE90F;</i>
+                    </div>
+                    
+                    
+
+                    <div class="content">
+
+                        <h2>Idealizações</h2>
+
+                        <p>
+                            Breves e objetivas textualizações referentes a
+                            pensamentos e eventualidades habituais.
+                        </p>
+
+                        <button class="button purple center icon right" style="background: #5f73c3;">
+                            Ver
+                            <i class="material-icons">&#xE5D3;</i>
+                        </button>
+
+                        <br/>
+                    </div>
+                </div>
+
+
+                <div class="column">
+                    <div style="position: relative;">
+                        <img src="images/3.jpg"/>
+                        
+                        <i class="material-icons thumb" style="color: #c079d7;">&#xE405;</i>
+                    </div>
+
+                    <div class="content">
+
+                        <h2>Composições</h2>
+
+                        <p>
+                            Composições breves de melodias morais afetivas,
+                            ausentes de edições sonoras e ambientes tecnicos.
+                        </p>
+
+                        <button class="button purple center icon right" style="background: #9f57b7;">
+                            Ver
+                            <i class="material-icons">&#xE5D3;</i>
+                        </button>
+
+                        <br/>
+                    </div>
+
+                    <br/><br/><br/>
+                </div>
+            </div>
+        </div>
+
+
+        <!--<br/>-->
+
+        <script>
+            $(document).ready(function () {
+
+                $('.steps div').click(function () {
+                    var t = this;
+                    var number;
+
+                    $.each($('.steps div'), function (a, b) {
+                        if (t === b)
+                            return (number = a);
+                    });
+
+
+                    $('.steps div').removeClass();
+                    $('.steps div').eq(number).addClass('black');
+
+                    $('._phrase').hide();
+                    $('._phrase').eq(number).fadeIn('slow');
+
+                });
+
+                $('.show_options').click(function () {
+                    if ($('.option').is(':visible'))
+                        $('.option').hide('medium');
+                    else
+                        $('.option').show('medium');
+                });
+
+                console.log();
+
+                setInterval(function () {
+
+                    var number;
+
+                    $.each($('.steps div'), function (a, b) {
+                        if ($('.steps .black')[0] == b) {
+                            number = a + 1;
+
+                            if (number == $('.steps div').length)
+                                number = 0;
+                        }
+                    });
+
+                    $('.steps div').eq(number).click();
+
+                }, 7000);
+
+            });
+        </script>
+
+    </body>
+</html>

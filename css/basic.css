@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    color: rgba(0,0,0,.84);
+    font-size: 14px;
+
+    font-family: 'Raleway', sans-serif;
+    /*font-family: 'Montserrat', sans-serif !important; */
+    /*font-family: 'Open Sans', sans-serif !important;  */
+    /*font-family: 'Poppins', sans-serif !important;    */
+    /*font-family: 'Roboto', sans-serif !important;     */
+    /*font-family: 'Times new Roman', times !important; */
+}
+
+a { text-decoration: none; }
+
+.center {
+    display: table;
+    margin: 0px auto;
+}
+
+.y-divider {
+    height: 100% !important;
+    background: #ddd;
+    padding-left: 1px;
+    display: inline;
+    margin: 0px 10px;
+}
+
+.content {
+    /*padding: 3.8% 7.8%;*/
+    padding: 1% 7.4%;
+    position: relative !important;
+}
